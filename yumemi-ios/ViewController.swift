@@ -6,14 +6,33 @@
 //
 
 import UIKit
+import YumemiWeather
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    
+    @IBOutlet private weak var weatherImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
+    
+    @IBAction private func tapReloadButton(_ sender: Any) {
+        
+        let image = YumemiWeather.fetchWeather()
+        switch image {
+        case "sunny":
+            weatherImageView.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
+            weatherImageView.tintColor = .red
+        case "cloudy":
+            weatherImageView.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
+            weatherImageView.tintColor = .gray
+        case "rainy":
+            weatherImageView.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
+            weatherImageView.tintColor = .blue
+        default:
+            break
+        }
+    }
 }
 
