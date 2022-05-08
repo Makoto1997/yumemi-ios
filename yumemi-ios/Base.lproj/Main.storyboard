@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LLl-Hq-imF">
                                 <rect key="frame" x="103.5" y="332" width="207" height="232"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cJE-XF-B1l">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="cJE-XF-B1l">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="207"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cJE-XF-B1l" secondAttribute="height" multiplier="1:1" id="Xk7-oL-aBQ"/>
@@ -60,6 +60,9 @@
                                         <rect key="frame" x="103.5" y="0.0" width="103.5" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Reload"/>
+                                        <connections>
+                                            <action selector="tapReloadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cPC-w6-Hzp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -75,6 +78,9 @@
                             <constraint firstItem="aqA-6R-6Pr" firstAttribute="top" secondItem="LLl-Hq-imF" secondAttribute="bottom" constant="80" id="s5L-eE-Dvm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="weatherImageView" destination="cJE-XF-B1l" id="p4U-zj-AlN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,6 +88,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="noImage" width="600" height="600"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
