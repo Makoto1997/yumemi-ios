@@ -12,8 +12,6 @@ final class ViewController: UIViewController {
     
     @IBOutlet private weak var weatherImageView: UIImageView!
     
-    private var weather = WeatherImageModel.allCases
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
