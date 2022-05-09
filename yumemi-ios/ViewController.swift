@@ -42,9 +42,9 @@ final class ViewController: UIViewController {
             Alert.autoCloseAlert(vc: self, title: "エラー", message: "unknownErrorです。")
             print("unknownErrorです。")
             return
-        } catch let error {
+        } catch {
             Alert.autoCloseAlert(vc: self, title: "エラー", message: "想定外のエラーです。")
-            print("想定外のエラーです。",error)
+            print("想定外のエラーです。", error)
             return
         }
     }
