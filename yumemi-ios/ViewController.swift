@@ -19,19 +19,33 @@ final class ViewController: UIViewController {
     
     @IBAction private func tapReloadButton(_ sender: Any) {
         
-        let image = YumemiWeather.fetchWeather()
-        switch image {
-        case "sunny":
-            weatherImageView.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
-            weatherImageView.tintColor = .red
-        case "cloudy":
-            weatherImageView.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
-            weatherImageView.tintColor = .gray
-        case "rainy":
-            weatherImageView.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
-            weatherImageView.tintColor = .blue
-        default:
-            break
+        do {
+            let image = try YumemiWeather.fetchWeather(at: "")
+            switch image {
+            case "sunny":
+                weatherImageView.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
+                weatherImageView.tintColor = .red
+            case "cloudy":
+                weatherImageView.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
+                weatherImageView.tintColor = .gray
+            case "rainy":
+                weatherImageView.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
+                weatherImageView.tintColor = .blue
+            default:
+                break
+            }
+        } catch YumemiWeatherError.invalidParameterError {
+            Alert.autoCloseAlert(vc: self, title: "エラー", message: "invalidParameterErrorです。")
+            print("invalidParameterErrorです。")
+            return
+        } catch YumemiWeatherError.unknownError {
+            Alert.autoCloseAlert(vc: self, title: "エラー", message: "unknownErrorです。")
+            print("unknownErrorです。")
+            return
+        } catch {
+            Alert.autoCloseAlert(vc: self, title: "エラー", message: "想定外のエラーです。")
+            print("想定外のエラーです。", error)
+            return
         }
     }
 }
