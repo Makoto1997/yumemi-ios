@@ -11,25 +11,37 @@ import YumemiWeather
 final class ViewController: UIViewController {
     
     @IBOutlet private weak var weatherImageView: UIImageView!
+    @IBOutlet private weak var maxTempLabel: UILabel!
+    @IBOutlet private weak var minTempLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    @IBAction private func tapReloadButton(_ sender: Any) {
+    private func getWeather() {
+        
+        let decoder = JSONDecoder()
+        let encoder = JSONEncoder()
         
         do {
-            let image = try YumemiWeather.fetchWeather(at: "")
-            switch image {
+            let request = APIRequest(area: "tokyo", date: "2020-04-01T12:00:00+09:00")
+            let data = try encoder.encode(request)
+            guard let requestJson = String(data: data, encoding: .utf8),
+                  let responseJson = try? YumemiWeather.fetchWeather(requestJson),
+                  let weatherModel = try? decoder.decode(WeatherModel.self, from: responseJson.data(using: .utf8)!) else { return }
+            maxTempLabel.text = String(weatherModel.maxTemp)
+            minTempLabel.text = String(weatherModel.minTemp)
+            
+            switch weatherModel.weather {
             case "sunny":
-                weatherImageView.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
+                weatherImageView.image = UIImage(named: weatherModel.weather)?.withRenderingMode(.alwaysTemplate)
                 weatherImageView.tintColor = .red
             case "cloudy":
-                weatherImageView.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
+                weatherImageView.image = UIImage(named: weatherModel.weather)?.withRenderingMode(.alwaysTemplate)
                 weatherImageView.tintColor = .gray
             case "rainy":
-                weatherImageView.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
+                weatherImageView.image = UIImage(named: weatherModel.weather)?.withRenderingMode(.alwaysTemplate)
                 weatherImageView.tintColor = .blue
             default:
                 break
@@ -47,6 +59,11 @@ final class ViewController: UIViewController {
             print("想定外のエラーです。", error)
             return
         }
+    }
+    
+    @IBAction private func tapReloadButton(_ sender: Any) {
+        
+        getWeather()
     }
 }
 
