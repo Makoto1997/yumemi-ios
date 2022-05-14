@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="yumemi_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeatherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="WeatherViewController" customModule="yumemi_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,7 +61,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Reload"/>
                                         <connections>
-                                            <action selector="tapReloadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cPC-w6-Hzp"/>
+                                            <action selector="tapReloadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Se1-J6-mdl"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -79,9 +79,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="maxTempLabel" destination="btz-Ye-iVj" id="TZk-U4-P4N"/>
-                        <outlet property="minTempLabel" destination="diG-1f-olA" id="mUX-wZ-Cif"/>
-                        <outlet property="weatherImageView" destination="cJE-XF-B1l" id="p4U-zj-AlN"/>
+                        <outlet property="maxTempLabel" destination="btz-Ye-iVj" id="LS7-Z1-7eQ"/>
+                        <outlet property="minTempLabel" destination="diG-1f-olA" id="51X-Xk-joz"/>
+                        <outlet property="weatherImageView" destination="cJE-XF-B1l" id="7fA-Vg-eiR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
