@@ -18,6 +18,7 @@
 		0E1FAE4F28251522004398E5 /* yumemi_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1FAE4E28251522004398E5 /* yumemi_iosUITestsLaunchTests.swift */; };
 		0E1FAE5D28259ABD004398E5 /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1FAE5C28259ABD004398E5 /* YumemiWeather */; };
 		0E1FAE772829487D004398E5 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1FAE762829487D004398E5 /* Alert.swift */; };
+		0EBF34E8282D52DA0093800A /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF34E7282D52DA0093800A /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		0E1FAE4C28251522004398E5 /* yumemi_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yumemi_iosUITests.swift; sourceTree = "<group>"; };
 		0E1FAE4E28251522004398E5 /* yumemi_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yumemi_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0E1FAE762829487D004398E5 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		0EBF34E7282D52DA0093800A /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				0E1FAE2B28251520004398E5 /* AppDelegate.swift */,
 				0E1FAE2D28251520004398E5 /* SceneDelegate.swift */,
 				0E1FAE762829487D004398E5 /* Alert.swift */,
+				0EBF34E7282D52DA0093800A /* WeatherModel.swift */,
 				0E1FAE2F28251520004398E5 /* ViewController.swift */,
 				0E1FAE3128251520004398E5 /* Main.storyboard */,
 				0E1FAE3428251521004398E5 /* Assets.xcassets */,
@@ -273,6 +276,7 @@
 				0E1FAE2C28251520004398E5 /* AppDelegate.swift in Sources */,
 				0E1FAE772829487D004398E5 /* Alert.swift in Sources */,
 				0E1FAE2E28251520004398E5 /* SceneDelegate.swift in Sources */,
+				0EBF34E8282D52DA0093800A /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
