@@ -65,5 +65,10 @@ final class WeatherViewController: UIViewController {
         
         getWeather()
     }
+    
+    @IBAction private func tapCloseButton(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
