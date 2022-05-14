@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0E1FAE2C28251520004398E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1FAE2B28251520004398E5 /* AppDelegate.swift */; };
-		0E1FAE2E28251520004398E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1FAE2D28251520004398E5 /* SceneDelegate.swift */; };
 		0E1FAE3028251520004398E5 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1FAE2F28251520004398E5 /* WeatherViewController.swift */; };
 		0E1FAE3328251520004398E5 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1FAE3128251520004398E5 /* Weather.storyboard */; };
 		0E1FAE3528251521004398E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E1FAE3428251521004398E5 /* Assets.xcassets */; };
@@ -42,7 +41,6 @@
 /* Begin PBXFileReference section */
 		0E1FAE2828251520004398E5 /* yumemi-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yumemi-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E1FAE2B28251520004398E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E1FAE2D28251520004398E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0E1FAE2F28251520004398E5 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		0E1FAE3228251520004398E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Weather.storyboard; sourceTree = "<group>"; };
 		0E1FAE3428251521004398E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				0E1FAE2B28251520004398E5 /* AppDelegate.swift */,
-				0E1FAE2D28251520004398E5 /* SceneDelegate.swift */,
 				0E1FAE762829487D004398E5 /* Alert.swift */,
 				0EBF34E7282D52DA0093800A /* WeatherModel.swift */,
 				0E1FAE2F28251520004398E5 /* WeatherViewController.swift */,
@@ -279,7 +276,6 @@
 				0E1FAE2C28251520004398E5 /* AppDelegate.swift in Sources */,
 				0E1FAE772829487D004398E5 /* Alert.swift in Sources */,
 				0EBF34EA28303B250093800A /* InitialViewController.swift in Sources */,
-				0E1FAE2E28251520004398E5 /* SceneDelegate.swift in Sources */,
 				0EBF34E8282D52DA0093800A /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,7 +458,6 @@
 				INFOPLIST_FILE = "yumemi-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Weather;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -491,7 +486,6 @@
 				INFOPLIST_FILE = "yumemi-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Weather;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
