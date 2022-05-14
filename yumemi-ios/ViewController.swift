@@ -23,13 +23,14 @@ final class ViewController: UIViewController {
         
         let decoder = JSONDecoder()
         let encoder = JSONEncoder()
+        var responseJson = ""
         
         do {
             let request = APIRequest(area: "tokyo", date: "2020-04-01T12:00:00+09:00")
             let data = try encoder.encode(request)
-            guard let requestJson = String(data: data, encoding: .utf8),
-                  let responseJson = try? YumemiWeather.fetchWeather(requestJson),
-                  let weatherModel = try? decoder.decode(WeatherModel.self, from: responseJson.data(using: .utf8)!) else { return }
+            guard let requestJson = String(data: data, encoding: .utf8) else { return }
+            responseJson = try YumemiWeather.fetchWeather(requestJson)
+            let weatherModel = try decoder.decode(WeatherModel.self, from: responseJson.data(using: .utf8)!)
             maxTempLabel.text = String(weatherModel.maxTemp)
             minTempLabel.text = String(weatherModel.minTemp)
             
