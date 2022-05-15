@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WeatherViewController.swift
 //  yumemi-ios
 //
 //  Created by Makoto on 2022/05/06.
@@ -8,7 +8,7 @@
 import UIKit
 import YumemiWeather
 
-final class ViewController: UIViewController {
+final class WeatherViewController: UIViewController {
     
     @IBOutlet private weak var weatherImageView: UIImageView!
     @IBOutlet private weak var maxTempLabel: UILabel!
@@ -64,6 +64,11 @@ final class ViewController: UIViewController {
     @IBAction private func tapReloadButton(_ sender: Any) {
         
         getWeather()
+    }
+    
+    @IBAction private func tapCloseButton(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
