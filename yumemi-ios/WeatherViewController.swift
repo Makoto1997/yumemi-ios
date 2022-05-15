@@ -17,6 +17,7 @@ final class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground(notification:)), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     
     private func getWeather() {
@@ -59,6 +60,11 @@ final class WeatherViewController: UIViewController {
             print("想定外のエラーです。", error)
             return
         }
+    }
+    
+    @objc private func willEnterForeground(notification: Notification ) {
+        
+        getWeather()
     }
     
     @IBAction private func tapReloadButton(_ sender: Any) {
